@@ -1,0 +1,20 @@
+/* OFFLINEMBC Sets the Library List for the OFFLINEMB    */
+/*               web service (universal display)           */
+
+             PGM
+
+    /* Change the following to point to the proper library +
+       names for your installation */
+
+             ADDLIBLE   LIB(PROFOUNDUI) POSITION(*LAST)
+             MONMSG     CPF2103
+
+             ADDLIBLE   LIB(YOUR-LIBRARY-HERE) POSITION(*LAST)
+             MONMSG     CPF2103
+
+
+             CALL       PGM(OFFLINEMB)
+             MONMSG     CPF0000 EXEC(DO)
+                DSPJOBLOG  JOB(*) OUTPUT(*PRINT)
+             ENDDO
+                                       
