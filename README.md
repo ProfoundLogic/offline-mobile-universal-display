@@ -31,6 +31,7 @@ This example project is a fork of the offline-mobile-sample project with the Pro
 Follow these instructions to produce a working offline app.
 ### Javascript Program
 
+- Edit the puimobile_default.json file and replace [SYNC_USER] and [SYNC_PASSWORD] with a valid username and password
 - Move `puimobile_default.js` and `puimobile_default.json` to the Profound UI "user data" JavaScript folder (`<profound_js>/htdocs/profoundui/userdata/js`).  These files comprise the actual offline app that will be downloaded to the mobile device and run.
 
 ### Files

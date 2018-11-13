@@ -25,13 +25,17 @@ pui.mobile = (function () {
   * @param {string} connection.parm The parameter to use with this connection.
   * @param {string} connection.baseURL A convenience property containing the base URL for this connection, formatted using the above properties (e.g., "https://yourServer:8080").
   * @param {string} connection.syncURL A convenience property containing a formatted `sync` URL (e.g., "https://yourServer:8080/sync?parameter=abc").
+  *            for the Universal Display version you can not use the syncURL value unless you add special routing to your system.
+  *            you can, however, use the baseURL and add the Universal Display URL path to the end
   * @param {function} callback Callback function that must be called when the sync process has completed.
   */
   function sync(connection, callback) {
     var config = {
       headers: { "Content-Type": "application/json" },
-      url: connection.syncURL,
+      url: connection.baseURL + "/profoundui/universal/offlinemb_sync",
       method: "post",
+	  user: "[SYNC_USER]",
+      password: "[SYNC_PASSWORD]",
       onfail: function (ajaxRequest) {
         callback(ajaxRequest.getStatusMessage());
       },
