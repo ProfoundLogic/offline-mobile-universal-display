@@ -49,7 +49,7 @@ Follow these instructions to produce a working offline app.
 - - OFFLINEMBC.CLLE - A CLLE program to set the library list
 - Copy and Paste the source code into RDI or FTP them to your IBM i
 - Edit the ADDLIBLE commands in OFFLINEMBC as needed
-- Compile the display file following by the RPG and CL programs
+- Compile the display file followed by the RPG and CL programs
 - Use the PUIWRKMAP command to add your mapping for the Universal Display File. Click "Add" and use these values:
 ```
 URI MAPPING: /offlinemb_sync
