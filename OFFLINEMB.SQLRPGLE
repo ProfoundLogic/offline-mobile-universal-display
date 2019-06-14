@@ -125,8 +125,11 @@
    //  allowmissing=yes is needed here because there is an object array
    //  in the data of unknown length which must be mapped to a DS array
    //  with a fixed length
-   DATA-INTO ordersDS %DATA('': 'case=convert allowmissing=yes')
+   MONITOR;
+     DATA-INTO ordersDS %DATA('': 'case=convert allowmissing=yes')
                    %PARSER('PUIUDFINTO');
+	ON-ERRROR;
+	ENDMON;
    return ordersDS;
 
  END-PROC; // Parse_With_Data_Into
